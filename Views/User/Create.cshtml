@@ -1,0 +1,40 @@
+﻿
+@model CDNsolution.Models.User
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Create New User</title>
+</head>
+<body>
+    @using (Html.BeginForm("Create", "User", FormMethod.Post))
+    {
+        <div>
+            Username: @Html.TextBoxFor( m => m.UserName)
+        </div>
+        <div>
+            Email: @Html.TextBoxFor( m => m.Email)
+        </div>
+        <div>
+            PhoneNumber: @Html.TextBoxFor( m => m.PhoneNumber)
+        </div>
+        <div>
+            Skillsets: @Html.TextBoxFor( m => m.Skillsets)
+        </div>
+        <div>
+            Hobby: @Html.TextBoxFor( m => m.Hobby)
+        </div>
+        <div>
+            <input type="submit" value="Create">
+        </div>
+    }
+
+</body>
+</html>
+
